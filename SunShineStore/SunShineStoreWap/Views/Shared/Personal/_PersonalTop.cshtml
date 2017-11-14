@@ -1,0 +1,70 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+
+    <script src="@SunStore_Web.ContentMap.GetStaticSourceUrl("Scripts/jquery-1.8.2.min.js")"></script>
+    <link href="@SunStore_Web.ContentMap.GetStaticSourceUrl("Content/Personal/style.css")" rel="stylesheet" />
+    <script type="text/javascript" data-main="@SunStore_Web.ContentMap.GetStaticSourceUrl("Scripts/Personal/easyResponsiveTabs.js")"  src="@SunStore_Web.ContentMap.GetStaticSourceUrl("Scripts/Requirejs/Personal.js")" ></script>
+     
+</head>
+<body>
+    <div class="main">
+        <div class="w3l_main_grid">
+            <div class="w3l_main_grid1">
+                <div class="w3l_main_grid1_left">
+                    <img src="@SunStore_Web.ContentMap.GetStaticSourceUrl("Content/images/Personal/star.png")" alt=" " class="img-responsive" />
+                </div>
+                <div class="w3l_main_grid1_right">
+                    <div class="menu">
+                        <span class="menu-icon">
+                            <a href="#">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </a>
+                        </span>
+                        <ul class="nav1">
+                            <li><a href="#">Log In</a></li>
+                            <li><a href="#">Sign Up</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Settings</a></li>
+                        </ul>
+                        <!-- script-for-menu -->
+                        <script>
+                            $("span.menu-icon").click(function () {
+                                $("ul.nav1").slideToggle(300, function () {
+                                    // Animation complete.
+                                });
+                            });
+                        </script>
+                        <!-- /script-for-menu -->
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="w3l_main_grid1_sub">
+                    <img src="@SunStore_Web.ContentMap.GetStaticSourceUrl("Content/images/Personal//1.png")" alt=" " class="img-responsive" />
+                    <h2>Meagan Fisher</h2>
+                </div>
+            </div>
+            <div class="w3l_main_grid2"> 
+                 @RenderBody()
+            </div>
+        </div>
+        <div class="wthree_footer_copy">
+            <p>Copyright &copy; 2017.小阿明童车店.</p>
+        </div>
+    </div>
+</body>
+</html>

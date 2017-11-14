@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22745CC7-27D9-4FA6-9E7E-0894B1B90BD7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SunShineStore.WxCommonDTO</RootNamespace>
+    <AssemblyName>SunShineStore.WxCommonDTO</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="WxBottomMenuDTO.cs" />
+    <Compile Include="WxLoginDTO.cs" />
+    <Compile Include="WxWeChatPublic\PaySignDTO.cs" />
+    <Compile Include="WxWeChatPublic\WxPayCallBackReturnDTO.cs" />
+    <Compile Include="WxWeChatPublic\WxPayNoticeDTO.cs" />
+    <Compile Include="WxWeChatPublic\WxPayUnifytheSingleDTO.cs" />
+    <Compile Include="WxServiceConfigDTO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Store.BaseDTO\Store.BaseDTO.csproj">
+      <Project>{6b4d5822-9097-49af-9105-169967c24058}</Project>
+      <Name>Store.BaseDTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SunShineStore.WxCommonEntity\SunShineStore.WxCommonEntity.csproj">
+      <Project>{a50da887-f08c-42f4-9702-1ce1b3c8567e}</Project>
+      <Name>SunShineStore.WxCommonEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SunShineStore.WxCommonEnum\SunShineStore.WxCommonEnum.csproj">
+      <Project>{68132286-F3CA-4C7D-95C7-D1F6A02C43FB}</Project>
+      <Name>SunShineStore.WxCommonEnum</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /r /y $(TargetDir)$(TargetName).dll $(SolutionDir)SunShineStore\Bin
+xcopy /r /y $(TargetDir)$(TargetName).dll $(SolutionDir)SunShineStoreWap\Bin</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

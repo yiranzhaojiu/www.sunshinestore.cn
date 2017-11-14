@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+
+<config>
+  <database>
+     <MgRead>Data Source=121.42.177.177;User ID=MeTooDatabase_R;Password=BZmAse;Initial Catalog=MeTooDatabase</MgRead>
+     <MgWreite>Data Source=121.42.177.177;User ID=MeTooDatabase_W;Password=NmAUiV;Initial Catalog=MeTooDatabase</MgWreite>
+     <MgAdmin>Data Source=121.42.177.177;User ID=MeTooDatabase_admin;Password=Ui4YvBge;Initial Catalog=MeTooDatabase</MgAdmin>
+  </database>
+</config>

@@ -1,0 +1,12 @@
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStore.WxCommonEnum\bin\Debug\SunShineStore.WxCommonEnum.dll
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStore.WxCommonEnum\bin\Debug\SunShineStore.WxCommonEnum.pdb
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStore.WxCommonEnum\bin\Debug\ServiceStack.Interfaces.dll
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStore.WxCommonEnum\obj\Debug\SunShineStore.WxCommonEnum.dll
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStore.WxCommonEnum\obj\Debug\SunShineStore.WxCommonEnum.pdb
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStore.WxCommonEnum\obj\Debug\SunShineStore.WxCommonEnum.csprojResolveAssemblyReference.cache
+E:\other_code\www.sunshinestore.cn\SunShineStore\SunShineStore.WxCommonEnum\bin\Debug\SunShineStore.WxCommonEnum.dll
+E:\other_code\www.sunshinestore.cn\SunShineStore\SunShineStore.WxCommonEnum\bin\Debug\SunShineStore.WxCommonEnum.pdb
+E:\other_code\www.sunshinestore.cn\SunShineStore\SunShineStore.WxCommonEnum\bin\Debug\ServiceStack.Interfaces.dll
+E:\other_code\www.sunshinestore.cn\SunShineStore\SunShineStore.WxCommonEnum\obj\Debug\SunShineStore.WxCommonEnum.csprojResolveAssemblyReference.cache
+E:\other_code\www.sunshinestore.cn\SunShineStore\SunShineStore.WxCommonEnum\obj\Debug\SunShineStore.WxCommonEnum.dll
+E:\other_code\www.sunshinestore.cn\SunShineStore\SunShineStore.WxCommonEnum\obj\Debug\SunShineStore.WxCommonEnum.pdb

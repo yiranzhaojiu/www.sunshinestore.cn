@@ -1,0 +1,5 @@
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStoreWap\bin\SunShineStore.Wap.WxPay.dll
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStoreWap\bin\SunShineStore.Wap.WxPay.pdb
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStoreWap\Areas\WapWxpay\obj\Debug\SunShineStore.Wap.WxPay.csprojResolveAssemblyReference.cache
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStoreWap\Areas\WapWxpay\obj\Debug\SunShineStore.Wap.WxPay.dll
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStoreWap\Areas\WapWxpay\obj\Debug\SunShineStore.Wap.WxPay.pdb

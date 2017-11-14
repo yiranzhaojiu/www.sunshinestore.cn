@@ -1,0 +1,5 @@
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStoreWap\bin\SunShineStore.Wap.Customer.dll
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStoreWap\bin\SunShineStore.Wap.Customer.pdb
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStoreWap\Areas\WapLogin\obj\Debug\SunShineStore.Wap.Customer.csprojResolveAssemblyReference.cache
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStoreWap\Areas\WapLogin\obj\Debug\SunShineStore.Wap.Customer.dll
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStoreWap\Areas\WapLogin\obj\Debug\SunShineStore.Wap.Customer.pdb

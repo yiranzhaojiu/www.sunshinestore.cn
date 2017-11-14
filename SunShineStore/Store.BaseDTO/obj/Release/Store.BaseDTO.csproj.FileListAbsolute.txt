@@ -1,0 +1,4 @@
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\Store.BaseDTO\bin\Release\Store.BaseDTO.dll
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\Store.BaseDTO\bin\Release\Store.BaseDTO.pdb
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\Store.BaseDTO\obj\Release\Store.BaseDTO.dll
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\Store.BaseDTO\obj\Release\Store.BaseDTO.pdb

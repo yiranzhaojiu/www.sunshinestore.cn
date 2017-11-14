@@ -1,0 +1,115 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=2.0,Transition=1)">
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="js/dist/css/LArea.css">
+<script type="text/javascript" src="js/TouchSlide.1.1.source.js"></script>
+<script type="text/javascript" src="js/layer_mobile/layer.js"></script>
+<title>保单详细</title>
+</head>
+
+<body class="mhome">
+ <div class="Slideshow">
+ <!--顶部样式-->
+  <div class="top">
+  <div class="logo"><a href="#"><img src="http://www.sucaihuo.com/Public/images/logo.png" /></a></div>
+  <div class="phone">
+   <a href="login.html" class="btn_phone"><i class="fa fa-user-circle-o" ></i></a>
+  </div>
+</div>
+<!--详细保单-->
+<div class="add_Inquiry_policy_style">
+  <div class="title_name">保单险种选择添加</div>
+  <div class="Details_Add_style ">
+  <ul class="clearfix bianji_info">
+       <span class="title_names"><label class="inline"><input name="radio_Policy" type="checkbox" class="ace"><span class="lbl">交强险</span></label></span>
+         <li style="height:40px;"><input name="" type="text" data-name="注册日期" placeholder="起保时间" class="laydate-icon text_add" id="test1"></li>
+         <li style="height:40px;"> <label class="inline"><input name="radio_Policy" type="checkbox" class="ace"><span class="lbl">车船税</span></label></li>
+      </ul>
+      <ul class="clearfix bianji_info">
+        <span class="title_names"><label class="inline"><input name="radio_Policy" type="checkbox" class="ace"><span class="lbl">商业险</span></label></span>
+   
+ <li style="height:40px;"><input name="" type="text" data-name="注册日期" placeholder="起保时间" class="laydate-icon text_add" id="test1"></li>
+         <li class="Basic_Policy clearfix"><span class="title_names">基本险</span> </li>                
+            <li>
+            <label class="label_name">车辆损失险：<label class="inline"><input type="checkbox" class="ace" checked="checked"><span class="lbl">不计免赔</span></label>
+            <span class="Policy_current"><select class="text_add select_style">
+           <option value="1">投保</option>
+           <option value="2">不投保</option>
+           </select></span>
+           </li>  
+            <li><label class="label_name">第三方责任险： <label class="inline"><input type="checkbox" class="ace" checked="checked"><span class="lbl">不计免赔</span></label></label><span class="Policy_current"><select class="text_add select_style">
+           <option value="1">2000</option>
+           <option value="2">10000</option>
+           </select>         
+           </span>
+           </li>  
+            <li><label class="label_name">全车盗抢险：<label class="inline"><input type="checkbox" class="ace" checked="checked"><span class="lbl">不计免赔</span></label></label><span class="Policy_current"><select class="text_add select_style">
+           <option value="1">投保</option>
+           <option value="2">不投保</option>
+           </select>           
+           </span>
+           </li>  
+            <li><label class="label_name">司机座位责任险：<label class="inline"><input type="checkbox" class="ace" checked="checked"><span class="lbl">不计免赔</span></label></label><span class="Policy_current"><select class="text_add select_style">
+           <option value="1">投保</option>
+           <option value="2">不投保</option>
+           </select>         
+           </span>
+           </li>  
+            <li><label class="label_name">乘客座位责任险：<label class="inline"><input type="checkbox" class="ace" checked="checked"><span class="lbl">不计免赔</span></label></label><span class="Policy_current"><select class="text_add select_style">
+           <option value="1">投保</option>
+           <option value="2">不投保</option>
+           </select>          
+           </span>
+           </li>            
+          <li class="Basic_Policy clearfix">  <span class="title_names">自然损失险：</span></li>
+           <li><label class="label_name">司机座位责任险：<label class="inline"><input type="checkbox" class="ace" checked="checked"><span class="lbl">不计免赔</span></label></label><span class="Policy_current"><select class="text_add select_style">
+           <option value="1">投保</option>
+           <option value="2">不投保</option>
+           </select>
+     
+           </span></li>  
+            <li><label class="label_name">玻璃单独破碎险：<label class="inline"><input type="checkbox" class="ace" checked="checked"><span class="lbl">不计免赔</span></label></label><span class="Policy_current"><select class="text_add select_style">
+           <option value="1">国产</option>
+           <option value="2">进口</option>
+           </select>
+  
+           </span></li>
+           <li><label class="label_name">车身划痕险：<label class="inline"><input type="checkbox" class="ace" checked="checked"><span class="lbl">不计免赔</span></label></label><span class="Policy_current"><select class="text_add select_style">
+           <option value="1">1200元</option>
+           <option value="2">20000元</option>
+           </select>
+
+           </span></li>  
+            <li><label class="label_name">涉水损失险：   <label class="inline"><input type="checkbox" class="ace" checked="checked"><span class="lbl">不计免赔</span></label> </label><span class="Policy_current"><select class="text_add select_style">
+           <option value="1">2000元</option>
+           <option value="2">10000元</option>
+           </select>
+         </span></li>
+           </ul>
+           <div class="Policy_info ">
+           <div class="Inquiry clearfix"><a href="javascript:history.go(-1)" class="btn btn_Previous fl">上一步</a> <a href="javascript:ovid()" class="btn btn_submit_Policy fl" onClick="Inquiry_submit_Policy()">提交保单</a></div></div>
+</div>
+</div>
+</div>
+</body>
+</html>
+<script>
+ /*****************提交查询**************/
+ function Inquiry_submit_Policy(){
+		  layer.open({
+               title: ['提示框','background-color: #FF4351; color:#fff; height:3rem; line-height:3rem'],				
+			   content:'提交成功,请耐心等待结果！',
+			   btn:['确定'],
+			   yes:function(){
+				   location.href="home.html";
+				   
+				   }
+			  });		       
+}
+</script>

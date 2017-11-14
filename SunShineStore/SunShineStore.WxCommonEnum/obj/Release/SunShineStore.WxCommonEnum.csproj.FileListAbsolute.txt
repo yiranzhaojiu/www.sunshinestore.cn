@@ -1,0 +1,5 @@
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStore.WxCommonEnum\bin\Release\SunShineStore.WxCommonEnum.dll
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStore.WxCommonEnum\bin\Release\SunShineStore.WxCommonEnum.pdb
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStore.WxCommonEnum\bin\Release\ServiceStack.Interfaces.dll
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStore.WxCommonEnum\obj\Release\SunShineStore.WxCommonEnum.dll
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStore.WxCommonEnum\obj\Release\SunShineStore.WxCommonEnum.pdb

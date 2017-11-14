@@ -1,0 +1,4 @@
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStore.Customer.Enum\bin\Debug\SunShineStore.Customer.Enum.dll
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStore.Customer.Enum\bin\Debug\SunShineStore.Customer.Enum.pdb
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStore.Customer.Enum\obj\Debug\SunShineStore.Customer.Enum.dll
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStore.Customer.Enum\obj\Debug\SunShineStore.Customer.Enum.pdb

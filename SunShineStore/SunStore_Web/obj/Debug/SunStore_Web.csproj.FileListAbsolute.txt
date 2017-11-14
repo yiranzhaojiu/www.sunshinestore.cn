@@ -1,0 +1,4 @@
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunStore_Web\bin\Debug\SunStore_Web.dll
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunStore_Web\bin\Debug\SunStore_Web.pdb
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunStore_Web\obj\Debug\SunStore_Web.dll
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunStore_Web\obj\Debug\SunStore_Web.pdb

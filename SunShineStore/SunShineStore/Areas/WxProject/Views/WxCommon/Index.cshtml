@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@model SunShineStore.WxCommonDTO.WxServiceConfigDTO
+
+<h2>@{
+        if((bool)ViewBag.status)
+        {
+           <span>@Model.echostr</span>
+        }
+        else
+        {
+         <span>@ViewBag.status</span>
+        }
+    }</h2>

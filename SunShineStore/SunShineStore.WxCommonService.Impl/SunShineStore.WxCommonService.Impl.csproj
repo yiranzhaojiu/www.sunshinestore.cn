@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{72CD21DF-70D8-44BD-9D5E-E5E1A60D586D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SunShineStore.WxCommonService.Impl</RootNamespace>
+    <AssemblyName>SunShineStore.WxCommonService.Impl</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Event\EventData\OrderPayFinshNotify.cs" />
+    <Compile Include="Event\EventData\OrderPayRecordLog.cs" />
+    <Compile Include="Event\EventHandler\RepertoryUpdateHandler.cs" />
+    <Compile Include="StoreRegisterServiceTask.cs" />
+    <Compile Include="WxBottomMenuServices.cs" />
+    <Compile Include="WxLoginServices.cs" />
+    <Compile Include="WxServerConfigServices.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WxWeChatPublicPayServices.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Store.BaseDTO\Store.BaseDTO.csproj">
+      <Project>{6b4d5822-9097-49af-9105-169967c24058}</Project>
+      <Name>Store.BaseDTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Store_FrameWork\Store_FrameWork.csproj">
+      <Project>{A54C7150-A992-4113-B9B2-536B103C060C}</Project>
+      <Name>Store_FrameWork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Store_Framework_Domain\Store_Framework_Domain.csproj">
+      <Project>{4da8bfa9-7da0-464c-9abd-c073f0538f6c}</Project>
+      <Name>Store_Framework_Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Strore_Common\Strore_Common.csproj">
+      <Project>{4c21e752-ed47-48a2-997c-130edeedde38}</Project>
+      <Name>Strore_Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Strore_Data\Strore_Data.csproj">
+      <Project>{b26b39f7-467f-465e-a20f-ddd6532259f8}</Project>
+      <Name>Strore_Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SunShineStore.WxCommonDTO\SunShineStore.WxCommonDTO.csproj">
+      <Project>{22745cc7-27d9-4fa6-9e7e-0894b1b90bd7}</Project>
+      <Name>SunShineStore.WxCommonDTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SunShineStore.WxCommonEntity\SunShineStore.WxCommonEntity.csproj">
+      <Project>{a50da887-f08c-42f4-9702-1ce1b3c8567e}</Project>
+      <Name>SunShineStore.WxCommonEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SunShineStore.WxCommonEnum\SunShineStore.WxCommonEnum.csproj">
+      <Project>{68132286-f3ca-4c7d-95c7-d1f6a02c43fb}</Project>
+      <Name>SunShineStore.WxCommonEnum</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SunShineStore.WxCommonService.Interface\SunShineStore.WxCommonService.Interface.csproj">
+      <Project>{ef324bbc-051c-4112-baff-b42ef246d7fd}</Project>
+      <Name>SunShineStore.WxCommonService.Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Event\EventData\README.txt" />
+    <Content Include="Event\EventHandler\README.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /r /y $(TargetDir)$(TargetName).dll $(SolutionDir)SunShineStore\Bin
+xcopy /r /y $(TargetDir)$(TargetName).dll $(SolutionDir)SunShineStoreWap\Bin</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

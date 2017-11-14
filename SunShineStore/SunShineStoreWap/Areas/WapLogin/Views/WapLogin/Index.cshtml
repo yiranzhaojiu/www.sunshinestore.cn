@@ -1,0 +1,143 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>迷途登录</title>
+    <link href="~/Content/Css/Login/supersized.css" rel="stylesheet" />
+    <link href="~/Content/Css/Login/LoginStyle.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+    <script src="~/Scripts/Loginjs/supersized.3.2.7.min.js"></script>
+    <script src="~/Scripts/Loginjs/supersized-init.js"></script>
+    <script src="/Scripts/angular/angular.min.js"></script>
+
+    <script>
+        var app = angular.module("wapLogin", []);
+        app.controller("wapform", function ($scope, $http) {
+            $scope.user = {
+                codeCacheKey:'@ViewBag.VID',
+                IsShowName: false,
+                IsShowPwd: false
+            };
+            //用户名验证
+            $scope.UsernameValidate = function (name) {
+                return true;
+            };
+            //密码验证
+            $scope.UserpwdValidate = function (pwd) {
+                return true;
+            };
+            //提交表单
+            $scope.reset = function () {
+                //验证用户名
+                if ($scope.user.username == undefined || $scope.user.username == "") {
+                    $scope.user.IsShowName = true;
+                    return;
+                }
+                else if (!$scope.UsernameValidate($scope.user.username)) {
+                    $scope.user.IsShowName = true;
+                    return;
+                }
+                else {
+                    $scope.user.IsShowName = false;
+                }
+
+                //验证密码
+                if ($scope.user.password == undefined || $scope.user.password == "") {
+                    $scope.user.IsShowPwd = true;
+                    return;
+                }
+                else if (!$scope.UserpwdValidate($scope.user.password)) {
+                    $scope.user.IsShowPwd = true;
+                    return;
+                }
+                else {
+                    $scope.user.IsShowPwd = false;
+                } 
+                $http.post(
+                    "/waplogin/waplogin/Login",
+                    JSON.stringify($scope.user),
+                    { contentType: "application/json" }).then(function successCallback(response) {
+                        if (response.status == 200) {
+                            if (response.data.Success == true) {
+                                alert("ok");
+                            }
+                            else {
+                                alert(response.data.Msg);
+                            }
+                        }
+                        else {
+
+                        }
+                });
+
+            };
+            $scope.unmaeblur = function () {
+                if ($scope.user.username == "" || $scope.user.username == undefined) {
+                    $scope.user.IsShowName = true;
+                } else {
+                    $scope.user.IsShowName = false;
+                }
+            };
+            $scope.upwdblur = function () {
+                if ($scope.user.password == "" || $scope.user.password == undefined) {
+                    $scope.user.IsShowPwd = true;
+                } else {
+                    $scope.user.IsShowPwd = false;
+                }
+            };
+            $scope.RefreshValidateCode = function (element) {
+                $(element).attr("src", $(element).attr("src") + "&s=" + (+(new Date())));
+            };
+            $scope.WxLogin = function () {
+                window.location.href = "/WapLogin/WapLogin/WxLogin";
+            }
+        });
+
+    </script>
+
+</head>
+<body>
+    <div class="page-container"  ng-app="wapLogin" ng-controller="wapform">
+        <div style="margin-bottom: 50px; width: 305px; margin: 0 auto;">
+            <img src="~/Content/Images/Login/logo.png" style="width: 30%;" />
+        </div>
+        <div class="form">
+            <div>
+                <input type="text" name="username" ng-model="user.username" class="username" ng-blur="unmaeblur()" placeholder="手机号/邮箱">
+                <span style="color:red;" ng-show='user.IsShowName'>请输入手机号/邮箱</span> 
+            </div>
+            <div>
+                <input type="password" name="password" ng-model="user.password" class="password" ng-blur="upwdblur()" placeholder="密码">
+                <span style="color:red;" ng-show="user.IsShowPwd">请输入密码</span>
+            </div>
+             <div>
+                 <input type="text" class="VidCode" name="code" ng-model="user.code" placeholder="验证码">
+                 <input type="hidden"  name="codeCacheKey" ng-model="user.codeCacheKey"/>
+                 <img id="login_vCode_img" class="VidCodeImg" ng-model="user.code" src="@Url.Action("index", "Img", new { vid =ViewBag.VID })" ng-click="RefreshValidateCode($event.target)"/>
+                 <span style="color:red;" ng-show="user.IsShowPwd">请输入验证码</span>
+             </div>
+              <div>
+                  <button ng-click="reset()" type="button">登&nbsp;录</button>
+                  <div class="error"><span>+</span></div>
+              </div> 
+        </div>
+        <div class="connect">
+            <p class="tiplogin">其它登录</p>
+            <p>
+                <img src="/Content/images/login/qq.png" class="facebook" />
+                <img src="/Content/images/login/weibo.png" class="facebook" />
+                <img src="/Content/images/login/weixin.png" ng-click="WxLogin()"  class="facebook" />
+            </p>
+        </div>
+    </div>
+</body>
+</html>

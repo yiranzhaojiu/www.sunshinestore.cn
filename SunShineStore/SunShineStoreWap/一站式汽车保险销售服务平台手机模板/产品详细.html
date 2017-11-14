@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" /> 
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=2.0,Transition=1)">
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="js/dist/css/LArea.css">
+<script type="text/javascript" src="js/TouchSlide.1.1.source.js"></script>
+<script type="text/javascript" src="js/layer_mobile/layer.js"></script>
+<script type="text/javascript" src="js/jquery.min.1.8.2.js"></script>
+<title>产品详细</title>
+</head>
+<body class="mhome">
+ <div class="Slideshow">
+ <header>
+  <span class="operating"><a href="javascript:history.go(-1)"><i class="fa_return"></i></a></span>
+  <span class="name">产品详细</span>
+  <span class="operating"><a href="home.html"><i class="fa_home"></i></a></span>
+ </header>
+ <section>
+ 	<div class="goods_slider">
+ 		 <div id="product_picture" class="product_picture">
+   <div class="hd"><ul></ul></div>
+   <div class="bd">
+   <em class="pageState"></em>
+    <ul>
+     <li><img src="products/01.jpg"/></li>
+     <li><img src="products/02.jpg" /></li>
+     <li><img src="products/03.jpg" /></li>
+     <li><img src="products/04.jpg" /></li>
+    </ul>
+   </div>
+  </div>
+  <script type="text/javascript">
+    TouchSlide({ 
+	slideCell:"#product_picture",
+	titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+	mainCell:".bd ul", 
+	effect:"leftLoop",
+	pageStateCell:".pageState",
+	autoPlay:false,//自动播放
+    autoPage:true, //自动分页
+    switchLoad:"_src" //切换加载，真实图片路径为"_src"
+});
+</script>
+ 		<!--标签内容-->
+ 		<div class="goodsInfo">
+ 			 <div class="p_content">
+    <h1>丰田 凯美瑞 2016款 2.0E 十周年纪念精英版 零首付</h1>
+    <h4>2017年最新新款上市</h4>
+   </div>
+   <div class="buy_info">
+    <ul>
+     <li><label>一口价</label> <b><i>￥</i>12.34万</b><span>￥15.34万</span></li>
+     <li><label>颜&nbsp;&nbsp;&nbsp;&nbsp;色</label>
+      <div class="prduct_Size">
+       <a href="#" class="on">蓝色</a>
+       <a href="#">红色</a>
+       <a href="#">橙色</a>
+      </div>
+     </li>
+     <li><label>数&nbsp;&nbsp;&nbsp;&nbsp;量</label><div class="j_nums">
+                    <input type="button" value="-" onclick="jianUpdate($(this));" class="n_btn_2"> 
+                    <input type="text" value="1" class="n_ipt">  
+                    <input type="button" value="+" onclick="addUpdate($(this));" class="n_btn_2">
+      </div></li>
+      <li class="Sales"><span class="zonjia">总价：14.45万</span>销量：2344件</li>
+    </ul>
+   </div>			
+ </div>
+ </div>
+ <div class="s-detail">
+ 	 <div id="leftTabBoxs">
+   <div class="hd">
+    <ul><li>详情</li><li>评价（1）</li><li>热销</li></ul>
+   </div>
+  <div class="bd"  id="tabBox1-bd">
+  	<div class="con">
+   <ul>
+     <div class="p_detailed">
+    <li><table class="p_detailed_content">
+     <tr><td class="label">品&nbsp;&nbsp;&nbsp;&nbsp;牌</td><td class="content">丝蓓绮（TSUBAKI)</td></tr>
+      <tr><td class="label">产品名称</td><td class="content">丝蓓绮（TSUBAKI） 炫魅赋活 洗发露550ml</td></tr>
+      <tr><td class="label">规&nbsp;&nbsp;&nbsp;&nbsp;格</td><td>发露550ml</td></tr>
+      <tr><td class="label">生产日期</td><td class="content">2015年6月12号</td></tr>
+      <tr><td class="label">保&nbsp;质&nbsp;期</td><td class="content">3弄</td></tr>
+      <tr><td class="label">包&nbsp;&nbsp;&nbsp;&nbsp;装</td><td class="content">塑料包装</td></tr>
+      <tr><td class="label">产&nbsp;&nbsp;&nbsp;&nbsp;地</td><td class="content">中国广州</td></tr>
+    </table>
+    </li>
+    <li><img src="images/11111.jpg"  width="100%"/></li>
+    <li><img src="images/11121.jpg"  width="100%"/></li>
+    </div>
+   </ul>
+   </div>
+   <div class="con">
+   <ul class="comment_style">
+    <div class="p_detailed">
+   <!--评价-->
+    <li class="radius">
+     <div class="title"><a href="#"><img src="images/people.png"  width="30" height="30"/>化海天堂 </a><span class="time">2016-3-12 14:23:34</span></div>
+     <div class="content">新浪评论,中国最有影响力的新闻评论与观点咨询平台,收集各媒体社评,社会各界对新近发生的新闻事件所发表的言论,提供包括时事、财经、体育、娱...</div>
+     <div class="score"><label>评分</label><span><em style=" width:55px;"></em></span><b>4.5</b></div>     
+    </li>
+    <li class="radius">
+     <div class="title"><a href="#"><img src="images/people.png"  width="30" height="30"/>化海天堂 </a><span class="time">2016-3-12 14:23:34</span></div>
+     <div class="content">新浪评论,中国最有影响力的新闻评论与观点咨询平台,收集各媒体社评,社会各界对新近发生的新闻事件所发表的言论,提供包括时事、财经、体育、娱...</div>
+     <div class="score"><label>评分</label><span><em style=" width:55px;"></em></span><b>4.5</b></div>     
+    </li>
+   
+     <li class="radius">
+     <div class="title"><a href="#"><img src="images/people.png"  width="30" height="30"/>化海天堂 </a><span class="time">2016-3-12 14:23:34</span></div>
+     <div class="content">新浪评论,中国最有影响力的新闻评论与观点咨询平台,收集各媒体社评,社会各界对新近发生的新闻事件所发表的言论,提供包括时事、财经、体育、娱...</div>
+     <div class="score"><label>评分</label><span><em style=" width:55px;"></em></span><b>4.5</b></div>     
+    </li>
+     <li class="radius">
+     <div class="title"><a href="#"><img src="images/people.png"  width="30" height="30"/>化海天堂 </a><span class="time">2016-3-12 14:23:34</span></div>
+     <div class="content">新浪评论,中国最有影响力的新闻评论与观点咨询平台,收集各媒体社评,社会各界对新近发生的新闻事件所发表的言论,提供包括时事、财经、体育、娱...</div>
+     <div class="score"><label>评分</label><span><em style=" width:55px;"></em></span><b>4.5</b></div>     
+    </li>
+     <li class="radius">
+     <div class="title"><a href="#"><img src="images/people.png"  width="30" height="30"/>化海天堂 </a><span class="time">2016-3-12 14:23:34</span></div>
+     <div class="content">新浪评论,中国最有影响力的新闻评论与观点咨询平台,收集各媒体社评,社会各界对新近发生的新闻事件所发表的言论,提供包括时事、财经、体育、娱...</div>
+     <div class="score"><label>评分</label><span><em style=" width:55px;"></em></span><b>4.5</b></div>     
+    </li>
+    <div id="pager" style="padding:10px 0">总计 2 个记录，共 1 页。 <span>  <a href="javascript:;">上一页</a> <a href="javascript:;">下一页</a>  </span></div>
+    <div class="commentsList radius5">
+      
+      </div>
+     </div>
+   </ul>
+   </div>
+   <div class="con">
+   <ul class="hot_style clearfix">
+    <li><div class="por_hot"><a href="#"><img src="images/products/7.jpg"  width="100%"/><h3>6袋装猪鼻贴去黑头套装祛粉刺吸黑头三步曲收缩毛孔鼻膜</h3></a><h4><i>￥</i>12.34万</h4> </div>   </li>
+    <li><div class="por_hot"><a href="#"><img src="images/products/2.jpg"  width="100%"/><h3>6袋装猪鼻贴去黑头套装祛粉刺吸黑头三步曲收缩毛孔鼻膜</h3></a><h4><i>￥</i>12.34万</h4> </div>   </li>
+    <li><div class="por_hot"><a href="#"><img src="images/products/3.jpg"  width="100%"/><h3>6袋装猪鼻贴去黑头套装祛粉刺吸黑头三步曲收缩毛孔鼻膜</h3></a><h4><i>￥</i>12.34万</h4> </div>   </li>
+    <li><div class="por_hot"><a href="#"><img src="images/products/4.jpg"  width="100%"/><h3>6袋装猪鼻贴去黑头套装祛粉刺吸黑头三步曲收缩毛孔鼻膜</h3></a><h4><i>￥</i>12.34万</h4> </div>   </li>
+    <li><div class="por_hot"><a href="#"><img src="images/products/5.jpg"  width="100%"/><h3>6袋装猪鼻贴去黑头套装祛粉刺吸黑头三步曲收缩毛孔鼻膜</h3></a><h4><i>￥</i>12.34万</h4> </div>   </li>
+    <li><div class="por_hot"><a href="#"><img src="images/products/6.jpg"  width="100%"/><h3>6袋装猪鼻贴去黑头套装祛粉刺吸黑头三步曲收缩毛孔鼻膜</h3></a><h4><i>￥</i>12.34万</h4> </div>   </li>
+    
+   </ul>
+   </div>
+  </div>
+  </div>
+  <script type="text/javascript">
+			TouchSlide( { slideCell:"#leftTabBoxs",
+
+				endFun:function(i){ //高度自适应
+					var bd = document.getElementById("tabBox1-bd");
+					bd.parentNode.style.height = bd.children[i].children[0].offsetHeight+"px";
+					if(i>0)bd.parentNode.style.transition="200ms";//添加动画效果
+				}
+
+			} );</script>
+ 	
+ </div>
+ <!--购买样式-->
+ <div class="buy_style">
+  <ul>
+  <li class="price"><i>￥</i>12.13<i>万</i></li>
+   <li class="operating"><a href="#" class="btns buy_btn">立即购买</a></li>
+   <li class="operating"><a href="#" class="btns Join_btn">加入购物车</a></li>
+  </ul>
+ </div>
+ </section>
+ </div>
+</body>
+</html>

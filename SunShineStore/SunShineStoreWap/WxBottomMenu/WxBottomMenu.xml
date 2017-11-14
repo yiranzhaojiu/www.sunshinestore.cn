@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+说明
+tab代表一级菜单
+menu代表二级菜单 
+-->
+
+<root>
+  <Tabs version="8">
+    <Tab text="查看学校">
+      <Menu text="河南院校在线咨询"><![CDATA[http://lp.sunlands.com/p/project-rest/7622.htm]]></Menu>
+    </Tab>
+    <Tab text="往期回顾"><![CDATA[https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzIwMzc2MTY1NA==#wechat_redirect]]></Tab>
+    <Tab text="在线咨询"><![CDATA[http://lp.sunlands.com/p/project-rest/7622.htm]]></Tab>
+  </Tabs>
+</root>
+
+
+

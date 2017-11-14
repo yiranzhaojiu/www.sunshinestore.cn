@@ -1,0 +1,238 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>生成菜单</title>
+    <style>
+        .divcontainer {
+            padding-left: 35px;
+            padding-top: 20px;
+            float:left;
+            width:100%;
+        }
+
+        table {
+            line-height: 30px;
+        }
+
+        .div_tab_control {
+            width: 300px;
+            float: left;
+        }
+        .tab_control {
+            float:left;
+        }
+        .Warm {
+            line-height: 30px;
+        }
+        .spMenu {
+            font-size: 14px;
+            color: #968b8b;
+        }
+        .btnAddMeun {
+            margin-top: 20px;
+        }
+        .bottomdivcontainer {
+            margin-left:350px;
+        }
+    </style>
+
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+    <script src="/Scripts/angular/angular.min.js"></script>
+    <script> 
+        var app = angular.module("MenuApp", []);
+        app.controller("MenuController", function ($scope, $http) { 
+            $scope.FirstMenuAdd = function () {
+                if ($scope.FirstMenu == undefined) {
+                    $scope.FirstMenu = [];
+                }
+                if ($scope.FirstMenu.length > 4){
+                    alert("每个一级菜单最多包含5个二级菜单")
+                    return;
+                } 
+                $scope.FirstMenu.push({
+                    Menutext: "",
+                    MenuUrl: "",
+                    type:1,
+                    SortIndex:$scope.FirstMenu.length
+                }); 
+            }
+            $scope.TwoMenuAdd = function () {
+                if ($scope.TwoMenu == undefined){
+                    $scope.TwoMenu = [];
+                }
+                if ($scope.TwoMenu.length > 4) {
+                    alert("每个一级菜单最多包含5个二级菜单")
+                    return;
+                }
+                $scope.TwoMenu.push({
+                    Menutext: "",
+                    MenuUrl: "",
+                    type: 2,
+                    SortIndex: $scope.TwoMenu.length
+                });
+            }
+            $scope.ThreeMenuAdd = function () {
+                if ($scope.ThreeMenu == undefined) {
+                    $scope.ThreeMenu = [];
+                }
+                if ($scope.ThreeMenu.length > 4) {
+                    alert("每个一级菜单最多包含5个二级菜单")
+                    return;
+                }
+                $scope.ThreeMenu.push({
+                    Menutext: "",
+                    MenuUrl: "",
+                    type: 3,
+                    SortIndex: $scope.ThreeMenu.length
+                });
+            }
+            $scope.btnSubmit = function () { 
+                if ($scope.btnIsEnable == 1) {
+                    return;
+                } 
+                $scope.btnIsEnable = 1;
+                var model = {
+                    FirstMenu: $scope.FirstMenu,
+                    TwoMenu: $scope.TwoMenu,
+                    ThreeMenu:$scope.ThreeMenu 
+                }; 
+                $http.post("/WapWxProject/WxBottomMenu/UpdateMenuData", JSON.stringify(model)).then(function successCallback(respones) {
+                    $scope.btnIsEnable = 0;
+                    if (respones.statusText = "ok") { 
+                       if (respones.data.errcode == "0" && respones.data.errmsg == "ok") { 
+                           alert("修改成功");
+                           window.location.reload()
+                       } else {
+                           alert(respones.data.errmsg);
+                       }
+                   }
+                   else {
+                       alert("请求错误");
+                   } 
+               }); 
+            };
+            $scope.init = function () {
+                $scope.btnIsEnable = 0; 
+                $http.post("/WapWxProject/WxBottomMenu/GetMenuData")
+                .then(function successCallback(respones) { 
+                    if (respones.data.FirstMenu.length > 0) {
+                        $scope.FirstMenu = respones.data.FirstMenu;
+                    }
+                    if (respones.data.TwoMenu.length > 0) {
+                        $scope.TwoMenu = respones.data.TwoMenu;
+                    }
+                    if (respones.data.ThreeMenu.length > 0) {
+                        $scope.ThreeMenu = respones.data.ThreeMenu;
+                    }
+                }); 
+            }
+            $scope.init();
+             
+        }); 
+    </script>
+</head>
+<body>
+    <div>
+        <ul class="Warm">
+            <li>温馨提示：</li>
+            <li>1、自定义菜单最多包括3个一级菜单，每个一级菜单最多包含5个二级菜单。</li>
+            <li>2、一级菜单最多4个汉字，二级菜单最多7个汉字，多出来的部分将会以“...”代替。</li> 
+            <li>3、添加子菜单，则一级菜单的URL将置为无效</li> 
+        </ul>
+    </div>
+    <div ng-app="MenuApp" ng-controller="MenuController"> 
+        <div class="divcontainer">
+            <div class="div_tab_control">
+                <table class="tab_control" ng-repeat="x in FirstMenu">
+                    <tr>
+                        <td>
+                            <input type="hidden" ng-model="x.SortIndex" />
+                            <input type="hidden" ng-model="x.type" />
+                            <span class="spMenu" ng-show="$index==0">一级菜单</span>
+                            <span class="spMenu" ng-show="$index>0">二级菜单</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>菜单名</td>
+                        <td>
+                            <input type="text" ng-model="x.Menutext" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>URL</td>
+                        <td>
+                            <input type="text" ng-model="x.MenuUrl" />
+                        </td>
+                    </tr>
+                </table>
+                <p><input class="btnAddMeun"  type="button" value="添加子菜单" ng-click="FirstMenuAdd()" /></p>
+            </div>
+            <div class="div_tab_control">
+                <table class="tab_control" ng-repeat="x in TwoMenu">
+                    <tr>
+                        <td>
+                            <input type="hidden" ng-model="x.SortIndex" />
+                            <input type="hidden" ng-model="x.type" />
+                            <span class="spMenu" ng-show="$index==0">一级菜单</span>
+                            <span class="spMenu" ng-show="$index>0">二级菜单</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>菜单名</td>
+                        <td>
+                            <input type="text" ng-model="x.Menutext" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>URL</td>
+                        <td>
+                            <input type="text" ng-model="x.MenuUrl" />
+                        </td>
+                    </tr>
+                </table>
+                <p><input class="btnAddMeun" type="button" value="添加子菜单" ng-click="TwoMenuAdd()" /></p>
+            </div>
+            <div class="div_tab_control">
+                <table class="tab_control" ng-repeat="x in ThreeMenu">
+                    <tr>
+                        <td>
+                            <input type="hidden" ng-model="x.SortIndex" />
+                            <input type="hidden" ng-model="x.type" />
+                            <span class="spMenu" ng-show="$index==0">一级菜单</span>
+                            <span class="spMenu" ng-show="$index>0">二级菜单</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>菜单名</td>
+                        <td>
+                            <input type="text" ng-model="x.Menutext" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>URL</td>
+                        <td>
+                            <input type="text" ng-model="x.MenuUrl" />
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                    <input class="btnAddMeun" type="button" value="添加子菜单" ng-click="ThreeMenuAdd()" /> 
+                </p>
+            </div>
+        </div>
+        <hr />
+        <div class="divcontainer">
+            <div class="bottomdivcontainer">
+                <input type="hidden"  ng-model="btnIsEnable"/>
+                <input type="button" value="提交" ng-click="btnSubmit()" style="width: 80px;font-size: 14px;" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>

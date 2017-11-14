@@ -1,0 +1,71 @@
+﻿@{
+    Layout = null;
+}
+
+@using SunStore_Web
+@model SunShineStore.WxCommonDTO.PaymentRequestDTO
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>微支付</title>
+
+    <link href="@ContentMap.GetStaticSourceUrl("/Content/Css/JSAPIPay/JSAPIPay.css")" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script> 
+    <script src="/Scripts/angular/angular.min.js"></script>
+
+
+    <script>
+        var app = angular.module("wapWxpayApp", []);
+        app.controller("wapWxpay", function ($scope, $http) {
+            $scope.PayReuqest = function () {
+                WeixinJSBridge.invoke(
+                           'getBrandWCPayRequest', {
+                               "appId": "@Model.appId",     //公众号名称，由商户传入
+                               "timeStamp": "@Model.timeStamp",         //时间戳，自1970年以来的秒数
+                               "nonceStr": "@Model.nonceStr", //随机串
+                               "package": "@Model.package",
+                               "signType": "@Model.signType",         //微信签名方式：
+                               "paySign": "@Model.paySign" //微信签名
+                           },
+                           function (res) {
+                               // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。
+                               if (res.err_msg == "get_brand_wcpay_request:ok") {
+                                   alert("ok");
+                               }
+                           }
+                       );
+            };
+            //确认支付
+            $scope.btnSurePay = function () { 
+                if (typeof WeixinJSBridge == "undefined") {
+                    if (document.addEventListener) {
+                        document.addEventListener('WeixinJSBridgeReady', $scope.PayReuqest, false);
+                    } else if (document.attachEvent) {
+                        document.attachEvent('WeixinJSBridgeReady', $scope.PayReuqest);
+                        document.attachEvent('onWeixinJSBridgeReady', $scope.PayReuqest);
+                    }
+                } else {
+                    $scope.PayReuqest();
+                }
+
+            };
+        });
+    </script>
+</head>
+<body> 
+    <section class="body" ng-controller="wapWxpay" ng-app="wapWxpayApp">
+        <input id="hfid" type="hidden" value="<%=o_id %>" />
+        <input id="hforderamount" type="hidden" value="<%=o_amount %>" />
+        <input id="hftradeno" type="hidden" value="<%=ono %>" />
+        <div class="ordernum">订单号：@Model.orderno </div>
+        <div class="money">共计金额￥@Model.price</div>
+        <div class="time">下单时间：@Model.downordertime</div>
+        <div class="paytype" style="display: none;">支付方式：微信支付</div>
+        <a href="javascript:void(0);" class="btn" id="getBrandWCPayRequest" ng-click="btnSurePay()">确认支付</a>
+    </section>
+</body>
+</html>

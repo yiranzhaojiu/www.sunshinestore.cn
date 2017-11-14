@@ -1,0 +1,4 @@
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStore.Services.Show.Entity\bin\Debug\SunShineStore.Services.Show.Entity.dll
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStore.Services.Show.Entity\bin\Debug\SunShineStore.Services.Show.Entity.pdb
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStore.Services.Show.Entity\obj\Debug\SunShineStore.Services.Show.Entity.dll
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\SunShineStore.Services.Show.Entity\obj\Debug\SunShineStore.Services.Show.Entity.pdb

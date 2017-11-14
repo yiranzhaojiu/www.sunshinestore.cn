@@ -1,0 +1,10 @@
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\Store.BaseDTO\bin\Debug\Store.BaseDTO.dll
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\Store.BaseDTO\bin\Debug\Store.BaseDTO.pdb
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\Store.BaseDTO\obj\Debug\Store.BaseDTO.dll
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\Store.BaseDTO\obj\Debug\Store.BaseDTO.pdb
+G:\ProjectCode\www.sunshinestore.cn\SunShineStore\Store.BaseDTO\obj\Debug\Store.BaseDTO.csprojResolveAssemblyReference.cache
+E:\other_code\www.sunshinestore.cn\SunShineStore\Store.BaseDTO\bin\Debug\Store.BaseDTO.dll
+E:\other_code\www.sunshinestore.cn\SunShineStore\Store.BaseDTO\bin\Debug\Store.BaseDTO.pdb
+E:\other_code\www.sunshinestore.cn\SunShineStore\Store.BaseDTO\obj\Debug\Store.BaseDTO.csprojResolveAssemblyReference.cache
+E:\other_code\www.sunshinestore.cn\SunShineStore\Store.BaseDTO\obj\Debug\Store.BaseDTO.dll
+E:\other_code\www.sunshinestore.cn\SunShineStore\Store.BaseDTO\obj\Debug\Store.BaseDTO.pdb

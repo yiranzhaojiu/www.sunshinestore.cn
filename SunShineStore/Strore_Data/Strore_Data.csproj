@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B26B39F7-467F-465E-A20F-DDD6532259F8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Strore_Data</RootNamespace>
+    <AssemblyName>Strore_Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Fasterflect">
+      <HintPath>..\packages\fasterflect.2.1.3\lib\net40\Fasterflect.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Common">
+      <HintPath>..\..\lib\ServiceStack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces">
+      <HintPath>..\..\lib\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\..\lib\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AosNamingStrategy.cs" />
+    <Compile Include="AosTransaction.cs" />
+    <Compile Include="BusinessRwType.cs" />
+    <Compile Include="DbFactory.cs" />
+    <Compile Include="DbTransactionContext.cs" />
+    <Compile Include="DbUtility.cs" />
+    <Compile Include="Ormlite\Converters\BoolConverter.cs" />
+    <Compile Include="Ormlite\Converters\ByteArrayConverter.cs" />
+    <Compile Include="Ormlite\Converters\DateTimeConverter.cs" />
+    <Compile Include="Ormlite\Converters\DateTimeOffsetConverter.cs" />
+    <Compile Include="Ormlite\Converters\FloatConverters.cs" />
+    <Compile Include="Ormlite\Converters\GuidConverter.cs" />
+    <Compile Include="Ormlite\Converters\IntegerConverters.cs" />
+    <Compile Include="Ormlite\Converters\SpecialConverters.cs" />
+    <Compile Include="Ormlite\Converters\SqlServerBoolConverter.cs" />
+    <Compile Include="Ormlite\Converters\SqlServerByteArrayConverter.cs" />
+    <Compile Include="Ormlite\Converters\SqlServerDateTime2Converter.cs" />
+    <Compile Include="Ormlite\Converters\SqlServerDateTimeConverter.cs" />
+    <Compile Include="Ormlite\Converters\SqlServerFloatConverters.cs" />
+    <Compile Include="Ormlite\Converters\SqlServerGuidConverter.cs" />
+    <Compile Include="Ormlite\Converters\SqlServerIntegerConverters.cs" />
+    <Compile Include="Ormlite\Converters\SqlServerSpecialConverters.cs" />
+    <Compile Include="Ormlite\Converters\SqlServerStringConverters.cs" />
+    <Compile Include="Ormlite\Converters\SqlServerTimeConverter.cs" />
+    <Compile Include="Ormlite\Converters\StringConverter.cs" />
+    <Compile Include="Ormlite\Converters\TimeSpanAsIntConverter.cs" />
+    <Compile Include="Ormlite\Dapper\SqlMapper.Async.cs" />
+    <Compile Include="Ormlite\Dapper\SqlMapper.cs" />
+    <Compile Include="Ormlite\DbTypes.cs" />
+    <Compile Include="Ormlite\Dialect\SqlServerDialect.cs" />
+    <Compile Include="Ormlite\Dialect\SqlServerExpression.cs" />
+    <Compile Include="Ormlite\Dialect\SqlServerOrmLiteDialectProvider.cs" />
+    <Compile Include="Ormlite\Expressions\IUntypedSqlExpression.cs" />
+    <Compile Include="Ormlite\Expressions\ParameterizedSqlExpression.cs" />
+    <Compile Include="Ormlite\Expressions\ParameterRebinder.cs" />
+    <Compile Include="Ormlite\Expressions\PredicateBuilder.cs" />
+    <Compile Include="Ormlite\Expressions\ReadExpressionCommandExtensions.cs" />
+    <Compile Include="Ormlite\Expressions\Sql.cs" />
+    <Compile Include="Ormlite\Expressions\SqlExpression.cs" />
+    <Compile Include="Ormlite\Expressions\SqlExpression.Join.cs" />
+    <Compile Include="Ormlite\Expressions\SqlExpressionVisitor.cs" />
+    <Compile Include="Ormlite\Expressions\WriteExpressionCommandExtensions.cs" />
+    <Compile Include="Ormlite\FieldDefinition.cs" />
+    <Compile Include="Ormlite\INamingStrategy.cs" />
+    <Compile Include="Ormlite\IOrmLiteConverter.cs" />
+    <Compile Include="Ormlite\IOrmLiteDialectProvider.cs" />
+    <Compile Include="Ormlite\IPropertyInvoker.cs" />
+    <Compile Include="Ormlite\IUntypedApi.cs" />
+    <Compile Include="Ormlite\JoinSqlBuilder.cs" />
+    <Compile Include="Ormlite\ModelDefinition.cs" />
+    <Compile Include="Ormlite\NamingStrategy.cs" />
+    <Compile Include="Ormlite\OrmLiteCommand.cs" />
+    <Compile Include="Ormlite\OrmLiteConfig.cs" />
+    <Compile Include="Ormlite\OrmLiteConfigExtensions.cs" />
+    <Compile Include="Ormlite\OrmLiteConnection.cs" />
+    <Compile Include="Ormlite\OrmLiteConnectionFactory.cs" />
+    <Compile Include="Ormlite\OrmLiteContext.cs" />
+    <Compile Include="Ormlite\OrmLiteDialectProviderBase.cs" />
+    <Compile Include="Ormlite\OrmLiteDialectProviderExtensions.cs" />
+    <Compile Include="Ormlite\OrmLiteExecFilter.cs" />
+    <Compile Include="Ormlite\OrmLiteNamingStrategyBase.cs" />
+    <Compile Include="Ormlite\OrmLitePersistenceProvider.cs" />
+    <Compile Include="Ormlite\OrmLiteReadApi.cs" />
+    <Compile Include="Ormlite\OrmLiteReadApiAsync.cs" />
+    <Compile Include="Ormlite\OrmLiteReadCommandExtensions.cs" />
+    <Compile Include="Ormlite\OrmLiteReadExpressionsApi.cs" />
+    <Compile Include="Ormlite\OrmLiteReadExpressionsApiAsync.cs" />
+    <Compile Include="Ormlite\OrmLiteResultsFilter.cs" />
+    <Compile Include="Ormlite\OrmLiteResultsFilterExtensions.cs" />
+    <Compile Include="Ormlite\OrmLiteSchemaApi.cs" />
+    <Compile Include="Ormlite\OrmLiteSchemaModifyApi.cs" />
+    <Compile Include="Ormlite\OrmLiteSPStatement.cs" />
+    <Compile Include="Ormlite\OrmLiteTransaction.cs" />
+    <Compile Include="Ormlite\OrmLiteUtils.cs" />
+    <Compile Include="Ormlite\OrmLiteVariables.cs" />
+    <Compile Include="Ormlite\OrmLiteWriteApi.cs" />
+    <Compile Include="Ormlite\OrmLiteWriteApiAsync.cs" />
+    <Compile Include="Ormlite\OrmLiteWriteCommandExtensions.cs" />
+    <Compile Include="Ormlite\OrmLiteWriteExpressionsApi.cs" />
+    <Compile Include="Ormlite\OrmLiteWriteExpressionsApiAsync.cs" />
+    <Compile Include="Ormlite\PropertyInvoker.cs" />
+    <Compile Include="Ormlite\ReflectionPropertyInvoker.cs" />
+    <Compile Include="Ormlite\SqlBuilder.cs" />
+    <Compile Include="Ormlite\SqlInValues.cs" />
+    <Compile Include="Ormlite\Support\LoadList.cs" />
+    <Compile Include="Ormlite\Support\LoadReferences.cs" />
+    <Compile Include="Ormlite\UntypedApi.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Ormlite\OrmLiteApi.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Store_FrameWork\Store_FrameWork.csproj">
+      <Project>{a54c7150-a992-4113-b9b2-536b103c060c}</Project>
+      <Name>Store_FrameWork</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
